@@ -1,0 +1,30 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "Login";
+}
+ <meta name="viewport" content="width=device-width" />
+   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<style>
+    body {
+        background-color:burlywood;
+    }
+    #btn {
+        margin-bottom:420px;
+    }
+    input {
+        margin-left:100px;
+        font-family:'Times New Roman';
+        font-size:20px;
+        padding:5px;
+    }
+    #heading {
+        margin-left:100px;
+    }
+</style>
+<h2 id="heading">Upload File</h2>
+<form action="/Home/upload" method="post" enctype="multipart/form-data ">
+    <input type="file" name="image" />
+   <input type="submit" value="upload" id="btn" />
+        </form>

@@ -1,0 +1,107 @@
+﻿
+@model shoppingwebsite.Models.Customer
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "SignUp";
+}
+ <meta name="viewport" content="width=device-width" />
+   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<style>
+    body {
+        background-color:beige;
+    }
+    #login {
+    font-family:'Arabic Typesetting';
+    font-style:italic;
+    font-size:60px;
+}
+    input {
+        margin-left:40px;
+        font-family:'Times New Roman';
+        font-size:20px;
+    }
+    Label {
+        margin-left:100px;
+        font-family:'Times New Roman';
+        font-size:30px;
+    }
+    #sup {
+    margin-top:50px;
+    margin-bottom:250px;
+    margin-left:50px;
+    margin-right:50px;
+}
+    #btn {
+        margin-left:100px;
+    }
+</style>
+<script>
+    $(document).ready(function () {
+        $('#btn').click(function () {
+            var u = $('#fullname').val();
+            $.getJSON("/SignUp/checkuser?fn=" + u, function (d) {
+                if (d) {
+                    $('#message').text("user not available");
+                }
+                else {
+                    $('#message').text("user available");
+                }
+            });
+        });
+    });
+        
+     </script>
+<div class="tweaked-margin" id="sup">
+    <h2 id="login">SignUp</h2>
+    <button  id="btn">CheckUser</button>
+    <div id="message" style="border:1px solid black">
+
+    </div>
+@using(Html.BeginForm("signup","SignUp",FormMethod.Post))
+{
+    //create form tag
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+    if(@ViewBag.Message!=null)
+    {
+     <div style="border:solid 1px green">
+         @ViewBag.Message
+     </div>   
+        
+    }
+    <table>
+        <tr>
+            <td>@Html.LabelFor(a => a.fullname)</td>
+            <td>@Html.TextBoxFor(a=>a.fullname, new {id="n" })</td>
+            <td>@Html.ValidationMessageFor(a=>a.fullname)</td>
+        </tr>
+         <tr>
+            <td>@Html.LabelFor(a=>a.username)</td>
+            <td>@Html.TextBoxFor(a=>a.username)</td>
+            <td>@Html.ValidationMessageFor(a=>a.username)</td>
+        </tr>
+        <tr>
+            <td>@Html.LabelFor(a=>a.password)</td>
+            <td>@Html.TextBoxFor(a=>a.password)</td>
+            <td>@Html.ValidationMessageFor(a=>a.password)</td>
+        </tr>
+         <tr>
+            <td>@Html.LabelFor(a=>a.confirmpassword)</td>
+            <td>@Html.TextBoxFor(a=>a.confirmpassword)</td>
+            <td>@Html.ValidationMessageFor(a=>a.confirmpassword)</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <input type="submit" value="SignUp" />
+            </td>
+            <td></td>
+        </tr>
+    </table>
+}
+    </div>
+ 
+

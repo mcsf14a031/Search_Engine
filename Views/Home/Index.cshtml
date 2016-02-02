@@ -1,0 +1,170 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <style>
+  .carousel-inner > .item > img,
+  .carousel-inner > .item > a > img {
+      width: 55%;
+      margin: auto;
+  }
+      #myCarousel {
+          background-color:gray;
+      }
+      .tweaked-margin {
+    margin-top: 10px;
+}
+
+      #sess{
+          margin-left:1200px;
+          font-family:'Times New Roman';
+          font-size:20px;
+      }
+  </style>
+</head>
+<body>
+     <div id="sess">
+    @if(Session["Logedusername"]!=null)
+    {
+       
+    <text >
+       Welcome @Session["Logedusername"].ToString()
+
+    </text>
+    }
+         </div>
+        <div class="tweaked-margin">
+            <div id="myCarousel" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#myCarousel" data-slide-to="1"></li>
+    <li data-target="#myCarousel" data-slide-to="2"></li>
+    <li data-target="#myCarousel" data-slide-to="3"></li>
+  </ol>
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner" role="listbox">
+   <div class="item active">
+      <img src="/Images/kids23.jpg" alt="kid">
+    </div>
+
+      <div class="item" id="b">
+      <img src="/Images/boy3.jpg" alt="kid">
+    </div>
+
+    <div class="item">
+      <img src="/Images/men1.png" alt="men">
+    </div>
+
+    <div class="item">
+      <img src="/Images/women2.jpg" alt="women">
+    </div>
+  </div>
+
+  <!-- Left and right controls -->
+  <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+            </div>
+    <!--kids-->
+     <div class="tweaked-margin">
+        <div class="container">
+            <h3>Kids Variety</h3>
+               <div class="row">
+                 <div class="col-xs-6 col-md-3">
+                  <a href="#" class="thumbnail">
+                    <img src="/Images/gk.jpg" alt="girl dress">
+                  </a>
+                  </div>
+         <div class="col-xs-6 col-md-3">
+           <a href="#" class="thumbnail">
+             <img src="/Images/bk.jpg" alt="boy dress">
+           </a>
+         </div>
+         <div class="col-xs-6 col-md-3">
+           <a href="#" class="thumbnail">
+             <img src="/Images/ks.jpg" alt="baby shoes">
+           </a>
+         </div>
+         <div class="col-xs-6 col-md-3">
+           <a href="#" class="thumbnail">
+             <img src="/Images/ks1.jpg" alt="baby shoes">
+           </a>
+        </div>
+            </div>
+        </div>
+      </div>
+    <!--women-->
+     <div class="tweaked-margin">
+        <div class="container">
+            <h3>women Variety</h3>
+               <div class="row">
+                 <div class="col-xs-6 col-md-3">
+                  <a href="#" class="thumbnail">
+                    <img src="/Images/gw.jpg" alt="women dress">
+                  </a>
+                  </div>
+         <div class="col-xs-6 col-md-3">
+           <a href="#" class="thumbnail">
+             <img src="/Images/ws.jpg" alt="women shoes">
+           </a>
+         </div>
+         <div class="col-xs-6 col-md-3">
+           <a href="#" class="thumbnail">
+             <img src="/Images/handbag.jpg" alt="handbag">
+           </a>
+         </div>
+         <div class="col-xs-6 col-md-3">
+           <a href="#" class="thumbnail">
+             <img src="/Images/gw1.jpg" alt="women dress">
+           </a>
+        </div>
+            </div>
+        </div>
+      </div>
+    <!--men-->
+     <div class="tweaked-margin">
+        <div class="container">
+            <h3>Men Variety</h3>
+               <div class="row">
+                 <div class="col-xs-6 col-md-3">
+                  <a href="#" class="thumbnail">
+                    <img src="/Images/mw.jpg" alt="men dress">
+                  </a>
+                  </div>
+         <div class="col-xs-6 col-md-3">
+           <a href="#" class="thumbnail">
+             <img src="/Images/bs.jpg" alt="shoes">
+           </a>
+         </div>
+         <div class="col-xs-6 col-md-3">
+           <a href="#" class="thumbnail">
+             <img src="/Images/watch.jpg" alt="watch">
+           </a>
+         </div>
+         <div class="col-xs-6 col-md-3">
+           <a href="#" class="thumbnail">
+             <img src="/Images/wallet.jpg" alt="wallet">
+           </a>
+        </div>
+            </div>
+        </div>
+      </div>
+</body>
+</html>

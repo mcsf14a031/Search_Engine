@@ -1,0 +1,53 @@
+﻿
+.tweaked-margin {
+    margin-top: 30px;
+}
+
+#mar {
+    margin-top: 40px;
+    margin-bottom: 250px;
+}
+#mag {
+    margin-top:20px;
+}
+#log {
+    margin-top:50px;
+    margin-bottom:250px;
+    margin-left:50px;
+    margin-right:50px;
+}
+#sup {
+     margin-top:50px;
+    margin-bottom:350px;
+    margin-left:50px;
+    margin-right:50px;
+}
+td {
+     margin-top:150px;
+    margin-bottom:350px;
+    margin-left:450px;
+    margin-right:50px;
+}
+tr {
+    padding:4px 7px 2px 4px;
+}
+footer p{
+   margin-left: 550px;
+   margin-top: 10px;
+    color:white;
+    font-size: 15px;
+}
+body {
+    background-color: aqua;
+}
+label {
+    margin-left: 5px;
+}
+input {
+    margin-left: 300px;
+}
+#login {
+    font-family:Arial;
+    font-style:italic;
+    
+}
